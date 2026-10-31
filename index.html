@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Film Festival</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/film.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="title-logo">
+             <a href="index.html"><img class="logo" src="assets/logo/cff-logo.png" alt="site logo"></a>
+             <h1 class="site-title">CFF College Film Festival 2026</h1>
+        </div>
+         
+        <menu class="pages-list">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="single.html">Film details</a>
+                </li>
+                <li>
+                    <a href="archive.html">All Films</a>
+                </li>
+            </ul>
+            
+            <ul>
+                <li>
+                    <i class="fa fa-bars"></i>
+                </li>
+            </ul>
+        </menu>
+
+         <input type="text" class="search" placeholder="search..."><i class="fa fa-search visually-hidden"></i></input>
+                <button class="btn-search">Search</button>
+        
+    </header>
+
+    <main>
+        <section class="home-hero">
+            <div class="hero-wrapper">
+                <h2>Welcome to the annual celebration of student film festival in Mexico City</h2>
+                <p>Let's celebrate the annual outstanding student films, June 13 - 17</p>
+                <div class="top-btn">
+                    <button type="button" id="btn-programs" class="btn-primary">View Latest Programs</button>
+                    <button type="button" id="btn-tickets" class="btn-secondary">Purchase your ticket(s)</button>
+                     
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div id="program-panel" class="visually-hidden">
+                 <table>
+                    <caption>Program Schedule: June 2026</caption>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Film</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>June 13</td>
+                            <td>10AM</td>
+                            <td>1 Film</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>June 14</td>
+                            <td>10AM</td>
+                            <td>2 Film</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>June 15</td>
+                            <td>10AM</td>
+                            <td>3 Film</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>June 16</td>
+                            <td>10AM</td>
+                            <td>4 Film</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>June 17</td>
+                            <td>10AM</td>
+                            <td>5 Film</td>
+                        </tr>
+                    </tbody>
+                 </table>
+            </div>
+            <div id="ticket-panel" class="ticket-panel visually-hidden">
+            <form id="ticket-form" novalidate>
+      <fieldset>
+        <legend>Ticket Purchase</legend>
+        <label for="full-name">Type your Full Name</label>
+        <input id="full-name" name="fullName" type="text" required/>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required/>
+
+        <label for="quantity">Number of Tickets</label>
+        <input id="quantity" name="quantity" type="number" min="1" max="10" required/>
+
+        <label for="day">Day</label>
+        <select id="day" name="day" required>
+          <option value="">Select Preferred Day</option>
+          <option>Monday</option>
+          <option>Tuesday</option>
+          <option>Wednesday</option>
+          <option>Thursday</option>
+          <option>Friday</option>
+        </select>
+
+        <label for="date">Date</label>
+        <select id="date" name="date" required>
+          <option value="">— Select date —</option>
+          <option>June 13th</option>
+          <option>June 14th</option>
+          <option>June 15th</option>
+          <option>June 16th</option>
+          <option>June 17th</option>
+        </select>
+
+        <label for="time">Time</label>
+        <select id="time" name="time" required>
+          <option value="">Select time</option>
+          <option>10:00AM</option>
+          <option>11:00AM</option>
+          <option>3:00PM</option>
+          <option>6:00PM</option>
+          <option>7:00PM</option>
+          <option>9:00PM</option>
+        </select>
+
+        <label for="card-number">Your Card Number</label>
+        <input id="card-number" name="cardNumber" type="text" inputmode="numeric" maxlength="19" pattern="\d{13,19}" placeholder="12341-234-1234-1234" required/>
+
+        <label for="cvv">CVV</label>
+        <input id="cvv" name="cvv" type="password" inputmode="numeric" maxlength="4" pattern="\d{3,4}" placeholder="e.g. 473" required/>
+
+        <label for="bank-name">Your Bank Name</label> 
+        <input id="bank-name" name="bankName" type="text" required/>
+
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+    </div>
+    </section>
+
+        <section class="latest-news">
+            <div class="left-side">
+                <h2>Latest News</h2>
+                <div class="left-news">
+                <div class="story-teaser">
+                    
+                    <img src="https://picsum.photos/800/600/?random=12" alt="random images">
+                    <h3>Emily</h3>
+                    <p>
+                        Emily is a 2022 British biographical drama film written and directed by Frances O'Connor in her directorial debut.
+                    </p>
+                    <a href="single.html">Read full story</a>
+                </div>
+                <div class="story-teaser">
+                    
+                    <img src="https://picsum.photos/800/600/?random=5" alt="random images">
+                    <h3>The Pursuit of Happiness</h3>
+                    <p>
+                        The film was released on December 15, 2006, by Columbia Pictures, and received positive reviews, with Smith's performance....
+                    </p>
+                    <a href="single.html">Read full story</a>
+                </div>
+                <div class="story-teaser">
+                    <img src="https://picsum.photos/800/600/?random=11" alt="random images">
+                    <h3>Finding Neverland</h3>
+                    <p>
+                       Finding Neverland is a 2004 biographical fantasy film directed by Marc Forster and written by David Magee, based on the 1998 play The Man Who Was Peter Pan by Allan Knee. 
+                    </p>
+                    <a href="single.html">Read full story</a>
+                </div>
+                <div class="story-teaser">
+                    <img src="https://picsum.photos/800/600/?random=6" alt="random images">
+                    <h3>The Royal Affair</h3>
+                    <p>
+                        The film received two Silver Bears at the 62nd Berlin International Film Festival,[2] and was nominated for the Academy Award for Best Foreign Language Film at the 85th Academy Awards...
+                    </p>
+                    <a href="single.html">Read full story</a>
+                </div>
+                <div class="story-teaser">
+                    <img src="https://picsum.photos/800/600/?random=7" alt="random images">
+                    <h3>City of God</h3>
+                    <p>
+                        City of God (Portuguese: Cidade de Deus) is a 2002 Brazilian epic crime film directed by Fernando Meirelles and Kátia Lund. The screenplay, written by Bráulio Mantovani, is adapted from the 1997 novel by Paulo Lins, though the plot is also loosely based on real events...
+                    </p>
+                    <a href="single.html">Read full story</a>
+                </div>
+                <div class="story-teaser">
+                    <img src="https://picsum.photos/800/600/?random=9" alt="random images">
+                    <h3>Born to Be Blue</h3>
+                    <p>
+                        The film is described as "semi-factual, semi-fictional".[8] Variety's reviewer, Andrew Barker, noted that the film is "about a character who happens...
+                    </p>
+                    <a href="single.html">Read full story</a>
+                </div>
+                </div>
+            </div>
+            <div class="old-news">
+                <h2>Older Stories</h2>
+                <ul class="right-side">
+                    <li>
+                        <a href="#">The Social Network</a>
+                    </li>
+                    <li>
+                        <a href="#">Hotel Rwanda</a>
+                    </li>
+                    <li>
+                        <a href="#">Invicible</a>
+                    </li>
+                    <li>
+                        <a href="#">The Pursuit of Happyness</a>
+                    </li>
+                    <li>
+                        <a href="#">Chopper</a>
+                    </li>
+                    <li>
+                        <a href="#">The Last King of Scotland</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="today-films">
+            <h2>Today's films</h2>
+            <div class="screens-container">
+                <div class="screens-wrapper">
+                    <div class="movie-screens">
+                        <h3>Friends or Foes</h3>
+                        <img src="https://img.youtube.com/vi/1705klbDD8E/hqdefault.jpg" alt="screenshots" class="movie-screenshots">
+                        <span>Timescreen: 01:48:00</span>
+                        <span>Country of Origin: Finland</span>
+                        <span>Year: 2022</span>
+                        <span>Directed by: Agnes Fuller</span>
+                        <i class="star-rating"><span>Rating</span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        </i>
+                        <button class="trailer" type="button" aria-expanded="false">Watch trailer</button>
+                        <div class="iframe-container">
+                            <iframe src="https://www.youtube.com/embed/1705klbDD8E?rel=0" loading="lazy" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="movie-screens">
+                        <h3>Nurse</h3>
+                        <img src="https://img.youtube.com/vi/-RdVmcHM3sc/hqdefault.jpg" alt="screenshots" class="movie-screenshots">
+                        
+                        <span>Timescreen: 01:38:03</span>
+                        <span>Country of Origin: Tunisia</span>
+                        <span>Year: 2009</span>
+                        <span>Directed by: Callie Walsh</span>
+                        <i class="star-rating"><span>Rating</span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        </i>
+                        <button class="trailer" type="button" aria-expanded="false">Watch trailer</button>
+                        <div class="iframe-container">
+                            <iframe src="https://www.youtube.com/embed/YE_9gOc9wWk" loading="lazy" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="movie-screens">
+                        <h3>One Night in Tokyo</h3>
+                        <img src="https://img.youtube.com/vi/EZRFGjK1Z5w/hqdefault.jpg" alt="screenshots" class="movie-screenshots">
+                        
+                        <span>Timescreen: 09:25:31</span>
+                        <span>Country of Origin: Slovenia</span>
+                        <span>Year: 2022</span>
+                        <span>Directed by: Charles Ortega</span>
+                        <i class="star-rating"><span>Rating</span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        </i>
+                        <button class="trailer" type="button" aria-expanded="false">Watch trailer</button>
+                        <div class="iframe-container">
+                            <iframe src="https://www.youtube.com/embed/VC05FGpa0KY" loading="lazy" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="movie-screens">
+                        <h3>Who Cares</h3>
+                        <img src="https://img.youtube.com/vi/so1G2QuGsWQ/hqdefault.jpg" alt="screenshots" class="movie-screenshots">
+                        
+                        <span>Timescreen: 09:19:59</span>
+                        <span>Country of Origin: Plurinational State of Bolivia</span>
+                        <span>Year: 2000</span>
+                        <span>Directed by: Marion Hudson</span>
+                        <i class="star-rating"><span>Rating</span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        </i>
+                        <button class="trailer" type="button" aria-expanded="false">Watch trailer</button>
+                        <div class="iframe-container">
+                            <iframe src="https://www.youtube.com/embed/alzfnK69-Dw" loading="lazy" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="movie-screens">
+                        <h3>Emily</h3>
+                        <img src="https://img.youtube.com/vi/5fdB4tOI-_M/hqdefault.jpg" alt="screenshots" class="movie-screenshots">
+                        
+                        <span>Timescreen: 06:17:37</span>
+                        <span>Country of Origin: United Kingdom</span>
+                        <span>Year: 2022</span>
+                        <span>Directed by: Fred Singleton</span>
+                        <i class="star-rating"><span>Rating</span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        </i>
+                        <button class="trailer" type="button" aria-expanded="false">Watch trailer</button>
+                        <div class="iframe-container">
+                            <iframe src="https://www.youtube.com/embed/lCa5rx_8WCc" loading="lazy" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="movie-screens">
+                        <h3>Rafiki</h3>
+                        <img src="https://img.youtube.com/vi/IP5ooJT9ZmY/hqdefault.jpg" alt="screenshots" class="movie-screenshots">
+                        
+                        <span>Timescreen: 13:32:58</span>
+                        <span>Country of Origin: Nauru</span>
+                        <span>Year: 2023</span>
+                        <span>Directed by: Blake Reese</span>
+                        <i class="star-rating"><span>Rating</span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        </i>
+                        <button class="trailer" type="button" aria-expanded="false">Watch trailer</button>
+                        <div class="iframe-container">
+                            <iframe src="https://www.youtube.com/embed/QgSeBDHqv_I" loading="lazy" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="movie-screens">
+                        <h3>The lord of the rings</h3>
+                        <img src="https://img.youtube.com/vi/9_NJX_LBj1g/hqdefault.jpg" alt="screenshots" class="movie-screenshots">
+                        
+                        <span>Timescreen: 11:54:59</span>
+                        <span>Country of Origin: Thailand</span>
+                        <span>Year: 2003</span>
+                        <span>Directed by: Lucille Jordan</span>
+                        <i class="star-rating"><span>Rating</span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        </i>
+                        <button class="trailer" type="button" aria-expanded="false">Watch trailer</button>
+                        <div class="iframe-container">
+                            <iframe src="https://www.youtube.com/embed/x8UAUAuKNcU" loading="lazy" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="movie-screens">
+                        <h3>Unknown ALIEN</h3>
+                        <img src="https://img.youtube.com/vi/bQS6MOW5N68/hqdefault.jpg" alt="screenshots" class="movie-screenshots">
+                        
+                        <span>Timescreen: 13:54:25</span>
+                        <span>Country of Origin: United Arab Emirates</span>
+                        <span>Year: 2017</span>
+                        <span>Directed by: Oscar Freeman</span>
+                        <i class="star-rating"><span>Rating</span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        </i>
+                        <button class="trailer" type="button" aria-expanded="false">Watch trailer</button>
+                        <div class="iframe-container">
+                            <iframe src="https://www.youtube.com/embed/FqIi3N9dusk" loading="lazy" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="movie-screens">
+                        <h3>You with Me</h3>
+                        <img src="https://img.youtube.com/vi/TI_j0fC24h4/hqdefault.jpg" alt="screenshots" class="movie-screenshots">
+                        
+                        <span>Timescreen: 10:54:30</span>
+                        <span>Country of Origin: South Corea</span>
+                        <span>Year: 2002</span>
+                        <span>Directed by: Minnie Dennis</span>
+                        <i class="star-rating"><span>Rating</span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        </i>
+                        <button class="trailer" type="button" aria-expanded="false">Watch trailer</button>
+                        <div class="iframe-container">
+                            <iframe src="https://www.youtube.com/embed/Plfe2_TLZ8A" loading="lazy" allowfullscreen></iframe>
+                        </div>        
+                    </div>
+                    <div class="movie-screens">
+                        <h3>COCO</h3>
+                        <img src="https://img.youtube.com/vi/dNmU_WkPB9s/hqdefault.jpg" alt="screenshots" class="movie-screenshots">
+                        
+                        <span>Timescreen: 01:17:13</span>
+                        <span>Country of Origin: Mexico</span>
+                        <span>Year: 2009</span>
+                        <span>Directed by: Tommy Banks</span>
+                        <i class="star-rating"><span>Rating</span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        </i>
+                        <button class="trailer" type="button" aria-expanded="false">Watch trailer</button>
+                        <div class="iframe-container">
+                            <iframe src="https://www.youtube.com/embed/Rvr68u6k5sI" loading="lazy" allowfullscreen></iframe>
+                        </div>     
+                    </div>
+                    <div class="movie-screens">
+                        <h3>Super Dog Adventure</h3>
+                        <img src="https://img.youtube.com/vi/8YDHPCVEros/hqdefault.jpg" alt="screenshots" class="movie-screenshots">
+                        
+                        <span>Timescreen: 01:17:13</span>
+                        <span>Country of Origin: South Africa</span>
+                        <span>Year: 2009</span>
+                        <span>Directed by: Tommy Banks</span>
+                        <i class="star-rating"><span>Rating</span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        </i>
+                        <button class="trailer" type="button" aria-expanded="false">Watch trailer</button>
+                        <div class="iframe-container">
+                            <iframe src="https://www.youtube.com/embed/MmWhKcAcvNo"   allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="movie-screens">
+                        <h3>Samia</h3>
+                        <img src="https://img.youtube.com/vi/7fhazHUybmU/hqdefault.jpg" alt="screenshots" class="movie-screenshots">
+                        
+                        <span>Timescreen: 01:17:13</span>
+                        <span>Country of Origin: Kenya</span>
+                        <span>Year: 2009</span>
+                        <span>Directed by: Tommy Banks</span>
+                        <i class="star-rating"><span>Rating</span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        <span class="fa fa-star review-stars"></span>
+                        </i>
+                        <button class="trailer" type="button" aria-expanded="false">Watch trailer</button>
+                        <div class="iframe-container">
+                            <iframe src="https://www.youtube.com/embed/4NNn3ZDGQUw" loading="lazy" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+            <!--If you click on watch you will be directed to single page-->
+            <section class="featured-films">
+                <h2>Featured movies</h2>
+                <div class="films">
+                    <div class="film">
+                        <div class="film-card-wrapper">
+                            <img src="https://img.youtube.com/vi/tgJDM47eKyo/hqdefault.jpg" alt="featured movies">
+                             <div class="film-icons">
+                              <i class="fas fa-heart"></i>
+                              <i class="fas fa-bookmark"></i>
+                              <i class="fas fa-share-alt"></i>
+                             </div>
+                        </div>
+                        <div class="film-details">
+                            <h3>Nola</h3>
+                            <p class="meta"> 2003 - 1h 34min - Romance</p>
+                            <div class="review-stars">
+                               <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            </div>
+
+                            <p class="plot-summary">
+                                After fleeing from her abusive stepfather in Kansas, Nola travels to NYC
+                            </p>
+
+                            <a href="#" class="read-more">Read more</a>
+
+                            <button class="watch-btn">
+                                <i class="fas fa-play"></i> Watch
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div class="film">
+                        <div class="film-card-wrapper">
+                            <img src="https://img.youtube.com/vi/2_1r0NNG-gg/hqdefault.jpg" alt="featured movies">
+                             <div class="film-icons">
+                              <i class="fas fa-heart"></i>
+                              <i class="fas fa-bookmark"></i>
+                              <i class="fas fa-share-alt"></i>
+                             </div>
+                        </div>
+                        <div class="film-details">
+                            <h3>Pali Road</h3>
+                            <p class="meta"> 2020 - 95min - Drama</p>
+                            <div class="review-stars">
+                               <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            </div>
+
+                            <p class="plot-summary">
+                                It was filmed in early 2015 on Oahu, Hawaii.[2] The film had its world premier at 
+                            </p>
+
+                            <a href="#" class="read-more">Read more</a>
+
+                            <button class="watch-btn">
+                                <i class="fas fa-play"></i> Watch
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div class="film">
+                        <div class="film-card-wrapper">
+                            <img src="https://img.youtube.com/vi/fjSdJZdOVSE/hqdefault.jpg" alt="featured movies">
+                             <div class="film-icons">
+                              <i class="fas fa-heart"></i>
+                              <i class="fas fa-bookmark"></i>
+                              <i class="fas fa-share-alt"></i>
+                             </div>
+                        </div>
+                        <div class="film-details">
+                            <h3>Mandela</h3>
+                            <p class="meta"> 2013 - 1h - Biographical</p>
+                            <div class="review-stars">
+                               <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            </div>
+
+                            <p class="plot-summary">
+                                Based on South African President Nelson Mandela's autobiography of the same name
+                            </p>
+
+                            <a href="#" class="read-more">Read more</a>
+
+                            <button class="watch-btn">
+                                <i class="fas fa-play"></i> Watch
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div class="film">
+                        <div class="film-card-wrapper">
+                            <img src="https://img.youtube.com/vi/mqL42sjb96I/hqdefault.jpg" alt="featured movies">
+                             <div class="film-icons">
+                              <i class="fas fa-heart"></i>
+                              <i class="fas fa-bookmark"></i>
+                              <i class="fas fa-share-alt"></i>
+                             </div>
+                        </div>
+                        <div class="film-details">
+                            <h3>The Queen</h3>
+                            <p class="meta"> 2006 - 1h 3min - Docudrama</p>
+                            <div class="review-stars">
+                               <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            </div>
+
+                            <p class="plot-summary">
+                                The 1997 general election has Tony Blair and...
+                            </p>
+
+                            <a href="#" class="read-more">Read more</a>
+
+                            <button class="watch-btn">
+                                <i class="fas fa-play"></i> Watch
+                            </button>
+
+                        </div>
+                    </div>  
+
+                    <div class="film">
+                        <div class="film-card-wrapper">
+                            <img src="https://img.youtube.com/vi/ivvxlHJYdu4/hqdefault.jpg" alt="featured movies">
+                             <div class="film-icons">
+                              <i class="fas fa-heart"></i>
+                              <i class="fas fa-bookmark"></i>
+                              <i class="fas fa-share-alt"></i>
+                             </div>
+                        </div>
+                        <div class="film-details">
+                            <h3>Colonia</h3>
+                            <p class="meta"> 2015 - 1h 50min - Thriller</p>
+                            <div class="review-stars">
+                               <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            </div>
+
+                            <p class="plot-summary">
+                               In 1973, Lena is a strong, independent and adventurous West...
+                            </p>
+
+                            <a href="#" class="read-more">Read more</a>
+
+                            <button class="watch-btn">
+                                <i class="fas fa-play"></i> Watch
+                            </button>
+
+                        </div>
+                    </div>
+                    
+                    <!--Middle east-->
+                    
+                    <div class="film">
+                        <div class="film-card-wrapper">
+                            <img src="https://img.youtube.com/vi/tE_6Gk8QNo4/hqdefault.jpg" alt="featured movies">
+                             <div class="film-icons">
+                              <i class="fas fa-heart"></i>
+                              <i class="fas fa-bookmark"></i>
+                              <i class="fas fa-share-alt"></i>
+                             </div>
+                        </div>
+                        <div class="film-details">
+                            <h3>Cleopatra</h3>
+                            <p class="meta"> 1963 - 244 mins - Drama</p>
+                            <div class="review-stars">
+                               <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            <span class="fa fa-star review-stars"></span>
+                            </div>
+                            <p class="plot-summary">
+                               After the Battle of Pharsalus in 48 BC, Julius Caesar goes to Egypt,.
+                            </p>
+
+                            <a href="#" class="read-more">Read more</a>
+
+                            <button class="watch-btn">
+                                <i class="fas fa-play"></i> Watch
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        
+
+        <!--Submitting film section-->
+        <section class="film-submission">
+            <form action="upload_handler.php" method="post">
+                <p>If you are a student or filmmaker and would like to participate with your film, please upload your short film below</p>
+                <h2>Submit your short film</h2>
+                <label for="files">Select your file</label>
+                <input type="file" id="files" name="files[]">
+                <input type="submit" value="upload files">
+            </form>
+        </section>
+
+        <!--Film sponsors section-->
+        <section class="film-sponsors">
+            <h2>Our Sponsors</h2>
+            <div class="logos">
+                <img src="assets/logo/32px-Apple_logo_grey.svg.png" alt="Apple">
+                <img src="assets/logo/16px-Google__G__logo.svg.png" alt="Google">
+                <img src="assets/logo/32px-Microsoft_logo.svg.png" alt="Microsoft">
+                <img src="assets/logo/64px-IBM_logo.svg.png" alt="IBM">
+                <img src="assets/logo/32px-Volkswagen_logo_2019.svg.png" alt="Volkswagen">
+                <img src="assets/logo/64px-F1.svg.png" alt="Apple">
+            </div>
+        </section>
+
+    </main>
+     
+
+    <footer class="site-footer" id="siteFooter">
+        <div class="footer-wrapper">
+            <!--Navigation section in the footer-->
+            <div class="footer-nav">
+                <!--Explore div-->
+                <div class="footer-list">
+                    <h3>EXPLORE</h3>
+                    <ul>
+                        <li>
+                            <a href="#">Shop / Merchandise</a>
+                        </li>
+                        <li>
+                            <a href="#">News and Stories</a>
+                        </li>
+                        <li>
+                            <a href="#">Photo Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#">Archives</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--Support-->
+                <div class="footer-list">
+                    <h3>SUPPORT</h3>
+                    <ul>
+                        <li><a href="#">Support Overview</a></li>
+                        <li><a href="#">Membership</a></li>
+                        <li><a href="#">CFF Foundation</a></li>
+                        <li><a href="#">Individual Giving</a></li>
+                        <li><a href="#">Corporate Giving</a></li>
+                        <li><a href="#">Government Support</a></li>
+                        <li><a href="#">Donate Now</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                    </ul>
+                </div>
+
+                <!--About area-->
+                <div class="footer-list">
+                    <h3>ABOUT CFF</h3>
+                    <ul>
+                        <li><a href="#">Our story</a></li>
+                        <li><a href="#">Our Mission</a></li>
+                        <li><a href="#">Our Vision</a></li>
+                        <li><a href="#">Annual Reports</a></li>
+                        <li><a href="#">Board of Trustees</a></li>
+                        <li><a href="#">Leadership</a></li>
+                        <li><a href="#">Departmental Contacts</a></li>
+                        
+                    </ul>
+                </div>
+
+                <!--Contact area-->
+                <div class="footer-list">
+                    <h3>CONTACT US</h3>
+                    <ul>
+                        <li><a href="#">Customer Support</a></li>
+                        <li><a href="#">Press Center</a></li>
+                        <li><a href="#">Jobs / Careers</a></li>
+                        <li><a href="#">Entities</a></li>
+                        <li><a href="#">Submit Your Film</a></li>
+                         
+                    </ul>
+                </div>
+            </div>
+
+            <!--Extras in the footer-->
+
+            <div class="extras">
+                <div class="college-involve">
+                    <a href="#" class="clg-btn">Donate</a>
+                    <a href="#" class="clg-btn">Join / Renew</a>
+                    <a href="#" class="clg-btn">Volunteer with Us</a>
+                </div>
+
+                <div class="footer-search">
+                    <input type="search" placeholder="Search you film..." arial-label="Footer search">
+                    <button class="search-btn">Search</button>
+                </div>
+
+                <form action="" class="news-form">
+                    <label for="email">Subscribe to our weekly newsletter</label>
+                    <input type="email" id="email" placeholder="ex: john@john.com" required>
+                    <button type="submit" class="sub-btn">Subscribe</button>
+                </form>
+            </div>
+            </div>
+
+            <div class="socials">
+                <h3>Find us on social media</h3>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-linkedin-in"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-pinterest"></i>
+                <i class="fab fa-tumblr"></i>
+                <i class="fab fa-snapchat-ghost"></i>
+                <i class="fab fa-reddit"></i>
+            </div>
+
+        <div class="footer-signature">
+            <p>&copy;2026 College Film Festival. all rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
